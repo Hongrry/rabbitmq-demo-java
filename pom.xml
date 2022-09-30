@@ -10,6 +10,7 @@
         <module>simple-hello-word</module>
         <module>work-queues</module>
         <module>publish-subcribe</module>
+        <module>routing</module>
     </modules>
     <name>rabbitmq-demo</name>
     <description>rabbitmq-demo</description>
