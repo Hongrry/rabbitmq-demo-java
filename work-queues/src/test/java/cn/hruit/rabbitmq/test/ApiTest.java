@@ -2,7 +2,6 @@ package cn.hruit.rabbitmq.test;
 
 import cn.hruit.rabbitmq.comsumer.Sender;
 import cn.hruit.rabbitmq.producer.Receiver;
-import org.junit.AfterClass;
 import org.junit.Test;
 
 import java.io.IOException;
