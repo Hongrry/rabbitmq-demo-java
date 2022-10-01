@@ -5,3 +5,5 @@ spring:
     username: admin
     password: admin
     virtual-host: my_vhost
+    publisher-confirm-type: correlated
+    publisher-returns: true

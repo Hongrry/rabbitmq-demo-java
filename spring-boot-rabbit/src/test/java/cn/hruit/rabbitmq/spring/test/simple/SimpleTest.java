@@ -2,6 +2,9 @@ package cn.hruit.rabbitmq.spring.test.simple;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.amqp.AmqpException;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.core.MessagePostProcessor;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -24,8 +27,7 @@ public class SimpleTest {
 
     @Test
     public void testSendSimpleMsg() throws InterruptedException {
-         while (true)
-        {
+        while (true) {
             rabbitTemplate.convertAndSend(SIMPLE_QUEUE, "你好" + new Date());
             Thread.sleep(500);
         }
