@@ -11,6 +11,7 @@
         <module>work-queues</module>
         <module>publish-subcribe</module>
         <module>routing</module>
+        <module>topics</module>
     </modules>
     <name>rabbitmq-demo</name>
     <description>rabbitmq-demo</description>
