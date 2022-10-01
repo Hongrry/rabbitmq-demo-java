@@ -22,9 +22,16 @@ public class SimpleConsumer {
     private final Logger logger = LoggerFactory.getLogger(SimpleConsumer.class);
 
     @RabbitListener(queues = Config.SIMPLE_QUEUE, ackMode = "MANUAL")
-    public void process(String content, Message message, Channel channel) throws IOException {
+    public void process1(String content, Message message, Channel channel) throws IOException {
         long deliveryTag = message.getMessageProperties().getDeliveryTag();
-        logger.info("收到消息:{},{}", content, message);
+        logger.info("1 收到消息:{},{}", content, message);
+        channel.basicAck(deliveryTag, false);
+    }
+
+    @RabbitListener(queues = Config.SIMPLE_QUEUE, ackMode = "MANUAL")
+    public void process2(String content, Message message, Channel channel) throws IOException {
+        long deliveryTag = message.getMessageProperties().getDeliveryTag();
+        logger.info("2 收到消息:{},{}", content, message);
         channel.basicAck(deliveryTag, false);
     }
 }

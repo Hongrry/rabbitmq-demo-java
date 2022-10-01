@@ -1,4 +1,4 @@
-package cn.hruit.rabbitmq.spring.simple;
+package cn.hruit.rabbitmq.spring.test.simple;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
