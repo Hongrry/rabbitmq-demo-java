@@ -13,7 +13,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbtimqConfig {
     @Bean("topicQueue")
-
     public Queue queue() {
         return new Queue("topic.queue", false, false, false);
     }

@@ -13,6 +13,7 @@
         <module>routing</module>
         <module>topics</module>
         <module>spring-boot-rabbit</module>
+        <module>spring-boot-rabbit-callback</module>
     </modules>
     <name>rabbitmq-demo</name>
     <description>rabbitmq-demo</description>

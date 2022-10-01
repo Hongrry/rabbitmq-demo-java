@@ -8,6 +8,7 @@ import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 import org.springframework.util.concurrent.ListenableFuture;
 
+import javax.annotation.Resource;
 import java.util.UUID;
 
 /**
@@ -15,6 +16,8 @@ import java.util.UUID;
  */
 @Component
 public class RabbitProducer {
+
+    @Resource
     private RabbitTemplate rabbitTemplate;
 
     //配置confirm监听具体处理，确认消息到达MQ,根据实际业务场景处理
@@ -44,8 +47,8 @@ public class RabbitProducer {
         }
     };
 
-    public RabbitProducer(RabbitTemplate rabbitTemplate) {
-        this.rabbitTemplate = rabbitTemplate;
+    public RabbitProducer() {
+
         //设置消息的confirm监听，监听消息是否到达exchange
         rabbitTemplate.setConfirmCallback(confirmCallback);
         //设置消息的return监听，当消息无法路由到queue时候，会触发这个监听。

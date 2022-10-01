@@ -1,0 +1,9 @@
+spring:
+  rabbitmq:
+    host: LocalServer
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: my_vhost
+    publisher-confirm-type: correlated
+    publisher-returns: true
