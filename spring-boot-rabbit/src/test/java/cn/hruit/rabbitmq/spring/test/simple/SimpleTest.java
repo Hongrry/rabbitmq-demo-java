@@ -16,7 +16,7 @@ import java.util.Date;
  **/
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class ContextTest {
+public class SimpleTest {
     public static final String SIMPLE_QUEUE = "simple";
 
     @Resource

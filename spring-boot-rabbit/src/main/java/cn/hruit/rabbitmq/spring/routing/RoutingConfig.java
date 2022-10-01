@@ -31,22 +31,22 @@ public class RoutingConfig {
     }
 
     @Bean
-    public Binding bingToErrorQueue(Queue errorLevelQueue, Exchange exchange) {
-        return new Binding(errorLevelQueue.getActualName(), Binding.DestinationType.QUEUE, exchange.getName(), "error", null);
+    public Binding bingToErrorQueue(Queue errorLevelQueue, Exchange logExchange) {
+        return new Binding(errorLevelQueue.getActualName(), Binding.DestinationType.QUEUE, logExchange.getName(), "error", null);
     }
 
     @Bean
-    public Binding bingInfoToAllQueue(Queue allLevelQueue, Exchange exchange) {
-        return new Binding(allLevelQueue.getActualName(), Binding.DestinationType.QUEUE, exchange.getName(), "info", null);
+    public Binding bingInfoToAllQueue(Queue allLevelQueue, Exchange logExchange) {
+        return new Binding(allLevelQueue.getActualName(), Binding.DestinationType.QUEUE, logExchange.getName(), "info", null);
     }
 
     @Bean
-    public Binding bingWarnToAllQueue(Queue allLevelQueue, Exchange exchange) {
-        return new Binding(allLevelQueue.getActualName(), Binding.DestinationType.QUEUE, exchange.getName(), "warn", null);
+    public Binding bingWarnToAllQueue(Queue allLevelQueue, Exchange logExchange) {
+        return new Binding(allLevelQueue.getActualName(), Binding.DestinationType.QUEUE, logExchange.getName(), "warn", null);
     }
 
     @Bean
-    public Binding bingDebugToAllQueue(Queue allLevelQueue, Exchange exchange) {
-        return new Binding(allLevelQueue.getActualName(), Binding.DestinationType.QUEUE, exchange.getName(), "debug", null);
+    public Binding bingDebugToAllQueue(Queue allLevelQueue, Exchange logExchange) {
+        return new Binding(allLevelQueue.getActualName(), Binding.DestinationType.QUEUE, logExchange.getName(), "debug", null);
     }
 }

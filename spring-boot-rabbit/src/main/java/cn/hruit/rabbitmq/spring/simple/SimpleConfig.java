@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
  * @date 2022/10/01 15:27
  **/
 @Configuration
-public class Config {
+public class SimpleConfig {
     public static final String SIMPLE_QUEUE = "simple";
 
     @Bean
